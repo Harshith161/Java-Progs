@@ -1,0 +1,22 @@
+package logger;
+
+public class StudentScore {
+
+    private final String name;
+    private final String roll;
+    private final int marks;
+
+    public StudentScore(String name, String roll, int marks) {
+        this.name = name;
+        this.roll = roll;
+        this.marks = marks;
+    }
+
+    public String getName() { return name; }
+    public String getRoll() { return roll; }
+    public int getMarks() { return marks; }
+
+    public String toCsv() {
+        return String.format("%s,%s,%d", name, roll, marks);
+    }
+}
